@@ -1,0 +1,14 @@
+int LEDPin=13;
+int waitTimeOn=900;
+int waitTimeOff=100;
+
+void setup() {
+    pinMode (LEDPin, OUTPUT);
+}
+
+void setup() {
+    digitalWrite (LEDPin, HIGH);
+    delay(waitTimeOn);
+    digitalWrite (LEDPin, LOW);
+    delay(waitTimeOff);
+}
