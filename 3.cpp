@@ -1,3 +1,5 @@
+// For, User Input
+
 int redLEDPin = 9;
 int yellowREDPin = 10;
 int redOnTime = 250;
