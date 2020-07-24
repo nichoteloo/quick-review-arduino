@@ -1,3 +1,20 @@
+// void setup() {
+//     Serial.begin(115200);
+// }
+
+// void loop() {
+//     int i = 1;
+//     while (i<=10) {
+//         Serial.print("You are on loop number : ");
+//         Serial.println(i);
+//         delay(250);
+//         i=i+1;
+//     }
+//     Serial.println(" ");
+// }
+
+// While
+
 int redLEDPin = 9;
 int yellowREDPin = 10;
 int redOnTime = 250;
@@ -31,31 +48,33 @@ void setup() {
     Serial.println("How many times do you want Yellow LED to blink ?");
     while(Serial.available()==0){ }
     numYellowBlink = Serial.parseInt();
-
 }
 
 void loop() {
 
     Serial.println(redMessage);  // title
-    for(int i=1; i<=numRedBlink; i=i+1) {
+    int i=1;
+    while(i<=numRedBlink) {
         Serial.print("   You are on Blink # : ");
         Serial.println(i);  // print out in the monitor
         digitalWrite(redLEDPin, HIGH);
         delay(redOnTime);
         digitalWrite(redLEDPin, LOW);
         delay(redOffTime);
+        i++;
     }
 
     Serial.println(" ");   // enter section
 
     Serial.println(yellowMessage);
-    for(int i=1; i<=numYellowBlink; i=i+1) {
+    int i=1;
+    while(i<=numYellowBlink) {
         Serial.print("   You are on Blink # : ");
         Serial.println(i);
         digitalWrite(yelloLEDPin, HIGH);
         delay(yelloOnTime);
         digitalWrite(yelloLEDPin, LOW);
         delay(yelloOffTime);
-    }
-    
+        i++;
+    }  
 }
