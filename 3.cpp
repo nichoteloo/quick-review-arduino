@@ -33,7 +33,6 @@ void setup() {
     Serial.println("How many times do you want Yellow LED to blink ?");
     while(Serial.available()==0){ }
     numYellowBlink = Serial.parseInt();
-
 }
 
 void loop() {
@@ -58,6 +57,5 @@ void loop() {
         delay(yelloOnTime);
         digitalWrite(yelloLEDPin, LOW);
         delay(yelloOffTime);
-    }
-    
+    }  
 }
