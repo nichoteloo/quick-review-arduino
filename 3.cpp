@@ -5,6 +5,7 @@ int redOffTime = 250;
 int yellowOnTime = 250;
 int yellowOffTime = 250;
 int numRedBlink = 10;
+int numYellowBlink = 10;
 
 void setup() {
     pinMode (redLEDPin, OUTPUT);
@@ -20,9 +21,11 @@ void loop() {
         delay(redOffTime);
     }
 
+    for(i=1; i<=numYellowBlink; i=i+1) {
     digitalWrite(yelloLEDPin, HIGH);
     delay(yelloOnTime);
     digitalWrite(yelloLEDPin, LOW);
     delay(yelloOffTime);
+    }
     
 }
