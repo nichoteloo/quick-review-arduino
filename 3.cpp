@@ -1,4 +1,4 @@
-// For, User Input
+// For, User Input, Prompt, Monitor
 
 int redLEDPin = 9;
 int yellowREDPin = 10;
