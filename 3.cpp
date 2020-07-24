@@ -4,8 +4,8 @@ int redOnTime = 250;
 int redOffTime = 250;
 int yellowOnTime = 250;
 int yellowOffTime = 250;
-int numRedBlink = 10;
-int numYellowBlink = 10;
+int numRedBlink;
+int numYellowBlink;
 String redMessage = "The RED LED is Blinking";
 String yellowMessage = "The Yellow LED is Blinking";
 
@@ -21,6 +21,17 @@ void setup() {
 
     pinMode (redLEDPin, OUTPUT);
     pinMode (yellowLEDPin, OUTPUT);
+
+    // Setup once in begining of program
+    Serial.println("How many times do you want RED LED to blink ?");    // prompt user
+    while(Serial.available()==0){ }      // wait for input
+    numRedBlink = Serial.parseInt();   // read user input
+
+    // Setup once in begining of program
+    Serial.println("How many times do you want Yellow LED to blink ?");
+    while(Serial.available()==0){ }
+    numYellowBlink = Serial.parseInt();
+
 }
 
 void loop() {
