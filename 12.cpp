@@ -11,6 +11,7 @@ Servo myPointer;    // create a servo object called myPointer
 
 void setup() {
     Serial.begin(9600);
+    pinMode(servoPin, OUTPUt);
     myPointer.attach(servoPin);
 }
 
